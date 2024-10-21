@@ -1,0 +1,228 @@
+body {
+    font-family: "Black Han Sans", sans-serif;
+    background: linear-gradient(45deg, #a3535a, #487c83);
+    background-size: 160%, 160%;
+    height: 100vh;
+    font-weight: 600;
+    margin: 0;
+    animation: gradient-animation 10s ease infinite;
+
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+header {
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    border-bottom-left-radius: 40px; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 40px; /* Rounded bottom-right corner */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    outline-style: solid;
+    outline-color: rgb(238, 238, 238);
+    outline-width: 3px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); 
+
+}
+
+.logo {
+    position: absolute;
+    margin-top: -210px;
+    margin-left: -267px;
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the spacing between items */
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 14px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+
+.navbar a:hover {
+    background-color: #ebebeb;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.navbar li{
+    background-color: #e3e3e3;
+    border-radius: 30px;
+
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: rgb(208, 208, 208);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+main {
+    color: white;
+    font-family: "Black Han Sans", sans-serif;
+}
+
+
+/* Fade-in keyframes */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Float animation keyframes */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* General fade-in for all elements */
+.hello, .introduction, .name, .bio, .bio_2, .bio_3 {
+    opacity: 0; /* Start invisible */
+    animation: fade-in 4s ease-in-out forwards; /* Fade-in effect over 4 seconds */
+}
+
+/* Staggered delay for each element */
+.hello {
+    margin-top: 200px;
+    margin-left: 200px;
+    font-size: 100px;
+    animation-delay: 0s; /* No delay for hello */
+}
+
+.introduction {
+    margin-top: 160px;
+    margin-left: 300px;
+    font-size: 30px;
+    animation-delay: 2s; /* Starts 2 seconds after hello */
+}
+
+.name {
+    margin-top: 130px;
+    margin-left: 330px;
+    font-size: 100px;
+    animation: fade-in 4s ease-in-out forwards; /* First, fade-in over 4s */
+    animation-delay: 4s; /* Fade-in starts 4 seconds after hello */
+    opacity: 0; /* Ensure it starts invisible */
+}
+
+/* Bio fade-in after name is fully visible */
+.bio {
+    font-family: 'Courier', monospace;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Initially hidden */
+    padding-left: 1100px;
+    margin-top: -530px;
+    
+    animation: fade-in 2s ease-in-out forwards; /* Fade in over 2s */
+    animation-delay: 8s; /* Starts after .name has fully faded in */
+}
+
+.bio_2 {
+    font-family: 'Courier', monospace;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Initially hidden */
+    padding-left: 1200px;
+    margin-top: 70px;
+    
+    animation: fade-in 2s ease-in-out forwards; /* Fade in over 2s */
+    animation-delay: 10s; /* Starts after .bio */
+}
+
+.bio_3 {
+    font-family: 'Courier', monospace;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Initially hidden */
+    padding-left: 1300px;
+    margin-top: 70px;
+    
+    animation: fade-in 2s ease-in-out forwards; /* Fade in over 2s */
+    animation-delay: 12s; /* Starts after .bio_2 */
+}
+
+/* Typewriter effect for the bio */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Typewriter starts after fade-in */
+.bio {
+    animation: fade-in 4s ease-in-out forwards, typewriter 4s steps(40) 10s forwards, blink 0.5s step-end infinite alternate; 
+
+}
+
+.bio_2 {
+    animation: fade-in 7s ease-in-out forwards, typewriter 6s steps(40) 12s forwards, blink 0.3s step-end infinite alternate;
+}
+
+.bio_3 {
+    animation: fade-in 10s ease-in-out forwards, typewriter 9s steps(40) 14s forwards, blink 1.5s step-end infinite alternate;
+}
+
+
+
+
+
+.indented {
+    display: block; 
+    margin-top: 90px;
+    margin-left: 50px; /* Adjust this value to move the text further to the left */
+}
+
+
+

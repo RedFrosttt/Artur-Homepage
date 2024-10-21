@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+}
+
+.home_button {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: #ffffff;
+    outline: solid;
+    outline-color: #cccccc;
+
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2); 
+
+    font-weight:lighter;
+}

@@ -27,6 +27,82 @@ body {
     }
 }
 
+/* General styles remain the same as your current CSS */
+
+/* Responsive styling for devices smaller than 768px */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        position: relative;
+        margin: 0 auto;
+        margin-top: -100px;
+        width: 150px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    main h1.hello {
+        margin-top: 100px;
+        margin-left: 20px;
+        font-size: 50px;
+    }
+
+    main h1.introduction {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    main h1.name {
+        margin-left: 20px;
+        font-size: 50px;
+    }
+
+    .bio, .bio_2, .bio_3 {
+        padding-left: 0;
+        font-size: 16px;
+        width: auto;
+    }
+
+    body {
+        background-size: 200% 200%;
+    }
+}
+
+/* For very small screens (less than 480px) */
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    main h1.hello {
+        font-size: 40px;
+    }
+
+    main h1.name {
+        font-size: 40px;
+    }
+
+    .bio, .bio_2, .bio_3 {
+        font-size: 14px;
+    }
+}
+
+
 header {
     width: 100%;
     background-color: white;
